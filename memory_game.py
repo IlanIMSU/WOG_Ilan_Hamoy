@@ -1,6 +1,6 @@
 import random
 import time
-from utils import screen_cleaner
+#from utils import screen_cleaner
 
 
 def generate_sequence(difficulty_level):
@@ -16,7 +16,7 @@ def generate_sequence(difficulty_level):
 
 def get_list_from_user():
     user_input = input('input a list of numbers that match the length of generated sequence,'
-                      ' separate the numbers with either a space or ",":')
+                       ' separate the numbers with either a space or ",":')
     user_list = user_input.replace(',', ' ').split()
     int_user_list = []
     for num in user_list:

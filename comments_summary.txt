@@ -1,16 +1,32 @@
 #directory Structure
 
-#project_directory/
-#├── main.py
-#├── app.py
-#├── guess_game.py
-#├── currency_roulette_game.py
-#├── memory_game.py
-#├── utils.py
-#└── score.py
+project_directory/
+├── main.py
+├── app.py
+├── guess_game.py
+├── currency_roulette_game.py
+├── memory_game.py
+├── utils.py
+├── score.py
+└── main_score.py
 
 
 
+Explanation:
+Flask Application:
+
+The Flask application is initialized.
+A route is defined to serve the score.
+Reading the Score:
+
+The read_score function reads the score from the Scores.txt file. If the file does not exist or cannot be read, it returns a bad return code.
+Serving the Score:
+
+The score_server function serves the score as HTML.
+If the score cannot be read, it returns an error message with a 500 status code.
+Running the Server:
+
+The Flask server runs on 0.0.0.0 and port 5000, making it accessible from other devices on the network.
 
 
 #main.py

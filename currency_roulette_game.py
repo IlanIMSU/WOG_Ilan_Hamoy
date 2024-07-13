@@ -5,10 +5,10 @@ import requests
 def get_money_interval(difficulty_level):
     response = requests.get("https://v6.exchangerate-api.com/v6/3c199a046563bfbb7307af3e/pair/USD/ILS")
     ils = response.json()["conversion_rate"]
-    computer_choos = random.randint(1, 100)
-    print(f"Guess how much {computer_choos}$ is in shekels: ")
-    highest_number = ils * computer_choos + 10 - difficulty_level
-    lower_number = ils * computer_choos - 10 + difficulty_level
+    computer_choose = random.randint(1, 100)
+    print(f"Guess how much {computer_choose}$ is in shekels: ")
+    highest_number = ils * computer_choose + 10 - difficulty_level
+    lower_number = ils * computer_choose - 10 + difficulty_level
     return highest_number, lower_number
 
 
@@ -35,4 +35,3 @@ def play(difficulty):
     highest = money[0]
     lower = money[1]
     return compare_results(highest, lower, get_guess_from_user())
-
