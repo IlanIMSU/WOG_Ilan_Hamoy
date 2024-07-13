@@ -1,5 +1,7 @@
 from games import currency_roulette_game, guess_game, memory_game
 import score
+from utils import screen_cleaner
+
 
 def welcome():
     user_personal_name = input("Hi, What is your name? ")
@@ -39,4 +41,3 @@ guess it back.
                     score.add_score(int(difficulty_level))
         else:
             print("This option does not exist, choose again")
-

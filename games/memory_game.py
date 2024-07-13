@@ -1,5 +1,6 @@
 import random
 import time
+from utils import screen_cleaner
 
 
 def generate_sequence(difficulty_level):
@@ -35,5 +36,3 @@ def is_list_equal(computer_list, user_list):
 
 def play(difficulty):
     return is_list_equal(generate_sequence(difficulty), get_list_from_user())
-
-
