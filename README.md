@@ -1,0 +1,83 @@
+#directory Structure
+
+project_directory/
+├── main.py
+├── app.py
+├── guess_game.py
+├── currency_roulette_game.py
+├── memory_game.py
+├── utils.py
+├── score.py
+└── main_score.py
+
+The html we resault should be open manually from th elink on the screen when you start the App.
+To start the App please run main.py
+
+
+
+
+#main.py
+
+# Imports the start_play function from the app module and runs it if the script is executed as the main program.
+
+
+#app.py:
+
+# Imports the subprocess and sys modules for installing packages.
+# Imports the screen_cleaner function from the utils module.
+# Imports the add_score function from the score module.
+# Defines a function to install packages using pip.
+# Tries to import the requests library and installs it if not found.
+# Imports the play functions from the guess_game, currency_roulette_game, and memory_game modules.
+# Defines the start_play function to handle game selection and difficulty level input.
+# Validates user input for game choice and difficulty level.
+# Calls the appropriate play function based on the user's game choice.
+# Displays the result of the game (win or lose).
+# Adds the score to the score file if the user wins.
+# Prompts the user to play again or exit the game loop.
+
+#currency_roulette_game.py:
+
+# Imports the random module.
+# Defines a function to install packages using pip.
+# Tries to import the requests library and installs it if not found.
+# Defines the get_exchange_rate function to fetch the current USD to ILS exchange rate from an API.
+# Defines the get_money_interval function to calculate the acceptable range for the user's guess based on the exchange rate and difficulty level.
+# Defines the get_guess_from_user function to prompt the user for their guess of the converted value.
+# Defines the compare_results function to check if the user's guess is within the acceptable range.
+# Defines the play function to execute the game logic using the above functions.
+
+#memory_game.py
+
+# Imports the random, time, and os modules.
+# Defines the generate_sequence function to create a list of random numbers based on the difficulty level.
+# Defines the get_list_from_user function to prompt the user to input the list of numbers they memorized.
+# Defines the is_list_equal function to compare the generated sequence with the user's input.
+# Defines the clear_screen function to clear the console screen.
+# Defines the play function to display the sequence, clear the screen, and prompt the user to recall and input the sequence.
+
+#guess_game.py
+
+# Imports the random module.
+# Defines the generate_number function to generate a random number within the range of the difficulty level.
+# Defines the get_guess_from_user function to prompt the user to guess the generated number.
+# Defines the compare_results function to check if the user's guess matches the generated number.
+# Defines the play function to execute the game logic using the above functions.
+
+
+#utils.py
+
+# Imports the os module.
+# Defines the SCORES_FILE_NAME variable to represent the name of the scores file.
+# Defines the BAD_RETURN_CODE variable to represent a bad return code for a function.
+# Defines the screen_cleaner function to clear the console screen.
+
+#score.py
+
+## Imports the os module.
+# Defines the SCORES_FILE_NAME variable to represent the name of the scores file.
+# Defines the BAD_RETURN_CODE variable to represent a bad return code for a function.
+# Defines the calculate_points_of_winning function to calculate points for winning a game based on the difficulty.
+# Defines the add_score function to add the score to the scores file based on the difficulty level.
+# The add_score function reads the current score, adds the new score, and writes it back to the file.
+
