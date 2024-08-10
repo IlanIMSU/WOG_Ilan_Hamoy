@@ -1,10 +1,10 @@
 from flask import Flask
 import os
 
-app = Flask(__name__)
+app: Flask = Flask(__name__)
 
 # Constants
-SCORES_FILE_NAME = "Scores.txt"
+SCORES_FILE_NAME = "/Scores.txt"
 BAD_RETURN_CODE = -1
 
 

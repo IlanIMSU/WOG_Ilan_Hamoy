@@ -1,0 +1,8 @@
+version: '3'
+services:
+  wog-app:
+    build: .
+    ports:
+      - "8777:5000"
+    volumes:
+      - ./Scores.txt:/Scores.txt
